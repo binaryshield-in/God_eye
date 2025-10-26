@@ -1,0 +1,722 @@
+2025-10-24 20:05:40,160 - godeye.api - INFO - Successfully imported analyze_query from main.py
+2025-10-24 20:05:40,243 - godeye.api - INFO - Successfully imported analyze_query from main.py
+2025-10-24 20:05:40,254 - godeye.api - INFO - ============================================================
+2025-10-24 20:05:40,254 - godeye.api - INFO - GodEye OSINT API Server Starting...
+2025-10-24 20:05:40,255 - godeye.api - INFO - ============================================================
+2025-10-24 20:05:40,255 - godeye.api - INFO - Dashboard path: d:\God_eye\dashboard
+2025-10-24 20:05:40,255 - godeye.api - INFO - Dashboard exists: True
+2025-10-24 20:05:40,256 - godeye.api - INFO - Results directory initialized
+2025-10-24 20:05:40,257 - godeye.api - INFO - Server initialization complete
+2025-10-24 20:06:23,810 - godeye.api - INFO - OPTIONS /api/search - Status: 200 - Time: 0.001s
+2025-10-24 20:06:23,813 - godeye.api - INFO - OPTIONS /api/search - Status: 200 - Time: 0.002s
+2025-10-24 20:06:23,819 - godeye.api - INFO - Analysis request: binaryshield.in (type: auto)
+2025-10-24 20:06:23,819 - GodEye - INFO - 🔍 Starting analysis for: binaryshield.in (type: auto)
+2025-10-24 20:06:24,037 - GodEye - INFO - ✅ Loaded collector: abuseipdb
+2025-10-24 20:06:24,058 - GodEye - WARNING - ⚠️  No collect function in bing_search
+2025-10-24 20:06:24,083 - GodEye - INFO - ✅ Loaded collector: crtsh
+2025-10-24 20:06:24,363 - GodEye - INFO - ✅ Loaded collector: dns_lookup
+2025-10-24 20:06:24,379 - GodEye - INFO - ✅ Loaded collector: duckduckgo
+2025-10-24 20:06:24,401 - GodEye - INFO - ✅ Loaded collector: ghdb
+2025-10-24 20:06:24,428 - GodEye - INFO - ✅ Loaded collector: github
+2025-10-24 20:06:24,466 - GodEye - WARNING - ⚠️  No collect function in google_config
+2025-10-24 20:06:24,495 - GodEye - INFO - ✅ Loaded collector: google_dorking
+2025-10-24 20:06:25,098 - GodEye - INFO - ✅ Loaded collector: google_scraper
+2025-10-24 20:06:25,113 - GodEye - INFO - ✅ Loaded collector: google_search
+2025-10-24 20:06:25,133 - GodEye - INFO - ✅ Loaded collector: hibp
+2025-10-24 20:06:25,155 - GodEye - INFO - ✅ Loaded collector: ipinfo
+2025-10-24 20:06:25,527 - GodEye - INFO - ✅ Loaded collector: reddit
+2025-10-24 20:06:25,540 - GodEye - INFO - ✅ Loaded collector: shodan
+2025-10-24 20:06:25,565 - GodEye - INFO - ✅ Loaded collector: twitter
+2025-10-24 20:06:25,605 - GodEye - INFO - ✅ Loaded collector: wayback
+2025-10-24 20:06:25,673 - GodEye - INFO - ✅ Loaded collector: whois
+2025-10-24 20:06:25,696 - godeye.api - INFO - Analysis request: binaryshield.in (type: auto)
+2025-10-24 20:06:25,697 - GodEye - INFO - 🔍 Starting analysis for: binaryshield.in (type: auto)
+2025-10-24 20:06:25,710 - GodEye - INFO - ✅ Loaded collector: abuseipdb
+2025-10-24 20:06:25,725 - GodEye - WARNING - ⚠️  No collect function in bing_search
+2025-10-24 20:06:25,737 - GodEye - INFO - ✅ Loaded collector: crtsh
+2025-10-24 20:06:25,760 - GodEye - INFO - ✅ Loaded collector: dns_lookup
+2025-10-24 20:06:25,779 - GodEye - INFO - ✅ Loaded collector: duckduckgo
+2025-10-24 20:06:25,793 - GodEye - INFO - ✅ Loaded collector: ghdb
+2025-10-24 20:06:25,809 - GodEye - INFO - ✅ Loaded collector: github
+2025-10-24 20:06:25,822 - GodEye - WARNING - ⚠️  No collect function in google_config
+2025-10-24 20:06:25,834 - GodEye - INFO - ✅ Loaded collector: google_dorking
+2025-10-24 20:06:25,849 - GodEye - INFO - ✅ Loaded collector: google_scraper
+2025-10-24 20:06:25,863 - GodEye - INFO - ✅ Loaded collector: google_search
+2025-10-24 20:06:25,992 - GodEye - INFO - ✅ Loaded collector: hibp
+2025-10-24 20:06:26,008 - GodEye - INFO - ✅ Loaded collector: ipinfo
+2025-10-24 20:06:26,026 - GodEye - INFO - ✅ Loaded collector: reddit
+2025-10-24 20:06:26,040 - GodEye - INFO - ✅ Loaded collector: shodan
+2025-10-24 20:06:26,063 - GodEye - INFO - ✅ Loaded collector: twitter
+2025-10-24 20:06:26,078 - GodEye - INFO - ✅ Loaded collector: wayback
+2025-10-24 20:06:26,094 - GodEye - INFO - ✅ Loaded collector: whois
+2025-10-24 20:06:26,187 - GodEye - INFO - 🔍 Executing google_search for binaryshield.in
+2025-10-24 20:06:26,199 - GodEye - INFO - 🔍 Executing hibp for binaryshield.in
+2025-10-24 20:06:26,215 - GodEye - INFO - 💾 Cache hit for google_scraper
+2025-10-24 20:06:26,223 - GodEye - INFO - 🔍 Executing abuseipdb for binaryshield.in
+2025-10-24 20:06:26,234 - GodEye - INFO - 💾 Cache hit for github
+2025-10-24 20:06:26,244 - GodEye - INFO - 💾 Cache hit for dns_lookup
+2025-10-24 20:06:26,256 - GodEye - INFO - 🔍 Executing ipinfo for binaryshield.in
+2025-10-24 20:06:26,265 - GodEye - INFO - 💾 Cache hit for dns_lookup
+2025-10-24 20:06:26,273 - GodEye - INFO - 💾 Cache hit for reddit
+2025-10-24 20:06:26,279 - GodEye - INFO - 🔍 Executing google_search for binaryshield.in
+2025-10-24 20:06:26,290 - GodEye - INFO - 🔍 Executing hibp for binaryshield.in
+2025-10-24 20:06:26,300 - GodEye - INFO - 💾 Cache hit for crtsh
+2025-10-24 20:06:26,314 - GodEye - INFO - 🔍 Executing abuseipdb for binaryshield.in
+2025-10-24 20:06:26,327 - GodEye - INFO - 🔍 Executing ipinfo for binaryshield.in
+2025-10-24 20:06:26,335 - GodEye - INFO - 💾 Cache hit for ghdb
+2025-10-24 20:06:26,346 - GodEye - INFO - 🔍 Executing twitter for binaryshield.in
+2025-10-24 20:06:26,353 - GodEye - INFO - 🔍 Executing twitter for binaryshield.in
+2025-10-24 20:06:26,362 - GodEye - INFO - 💾 Cache hit for duckduckgo
+2025-10-24 20:06:26,371 - GodEye - INFO - 💾 Cache hit for wayback
+2025-10-24 20:06:26,381 - GodEye - INFO - 💾 Cache hit for whois
+2025-10-24 20:06:26,388 - GodEye - INFO - 💾 Cache hit for ghdb
+2025-10-24 20:06:26,395 - GodEye - INFO - 💾 Cache hit for reddit
+2025-10-24 20:06:26,405 - GodEye - INFO - 💾 Cache hit for google_dorking
+2025-10-24 20:06:26,412 - GodEye - INFO - 🔍 Executing shodan for binaryshield.in
+2025-10-24 20:06:26,423 - GodEye - INFO - 💾 Cache hit for duckduckgo
+2025-10-24 20:06:26,433 - GodEye - INFO - 💾 Cache hit for crtsh
+2025-10-24 20:06:26,443 - GodEye - INFO - 💾 Cache hit for github
+2025-10-24 20:06:26,452 - GodEye - INFO - 💾 Cache hit for wayback
+2025-10-24 20:06:26,460 - GodEye - INFO - 🔍 Executing shodan for binaryshield.in
+2025-10-24 20:06:26,473 - GodEye - INFO - 💾 Cache hit for whois
+2025-10-24 20:06:26,487 - GodEye - INFO - 💾 Cache hit for google_scraper
+2025-10-24 20:06:26,497 - GodEye - INFO - 💾 Cache hit for google_dorking
+2025-10-24 20:06:26,971 - GodEye - WARNING - Google Search API returned status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "errors": [
+      {
+        "message": "API key not valid. Please pass a valid API key.",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "customsearch.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2025-10-24 20:06:27,002 - GodEye - WARNING - Google Search API returned status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "errors": [
+      {
+        "message": "API key not valid. Please pass a valid API key.",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "customsearch.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2025-10-24 20:06:27,007 - GodEye - WARNING - Shodan API returned status 401
+2025-10-24 20:06:27,057 - GodEye - WARNING - Twitter API returned 401
+2025-10-24 20:06:27,118 - GodEye - WARNING - Twitter API returned 401
+2025-10-24 20:06:27,136 - GodEye - INFO - ✅ Raw results saved to results/output.json
+2025-10-24 20:06:27,153 - core.correlation.graph - INFO - Building entity graph from 1 records
+2025-10-24 20:06:27,156 - core.correlation.graph - INFO - Graph built: 0 nodes, 0 edges
+2025-10-24 20:06:27,158 - core.correlation.graph - INFO - Graph exported to results/entity_graph.json
+2025-10-24 20:06:27,159 - core.correlation.confidence - INFO - Computing threat confidence scores
+2025-10-24 20:06:27,162 - core.correlation.confidence - INFO - Computed scores for 0 entities
+2025-10-24 20:06:27,164 - core.correlation.embeddings - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-10-24 20:06:27,169 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-24 20:06:27,170 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-24 20:06:32,306 - core.correlation.embeddings - INFO - Generating embeddings for 1 records
+2025-10-24 20:06:32,307 - core.correlation.embeddings - INFO - Generated 0 embeddings
+2025-10-24 20:06:32,307 - core.correlation.embeddings - WARNING - No embeddings to save
+2025-10-24 20:06:32,307 - core.correlation.analytics - INFO - Generating analytics report
+2025-10-24 20:06:32,309 - core.correlation.analytics - INFO - Analytics saved to results/analytics.json
+2025-10-24 20:06:32,309 - GodEye - INFO - ✅ Normalization pipeline completed
+2025-10-24 20:06:32,318 - GodEye - INFO - ✅ Generated AI summary for 1 indicators
+2025-10-24 20:06:32,327 - godeye.api - ERROR - Failed to save output.json: Object of type DiGraph is not JSON serializable
+2025-10-24 20:06:32,328 - godeye.api - INFO - Analysis complete in 8.51s - 1 entities
+2025-10-24 20:06:32,333 - godeye.api - INFO - POST /api/search - Status: 200 - Time: 8.518s
+2025-10-24 20:06:32,335 - GodEye - WARNING - Shodan API returned status 401
+2025-10-24 20:06:32,339 - GodEye - INFO - ✅ Raw results saved to results/output.json
+2025-10-24 20:06:32,346 - core.correlation.graph - INFO - Building entity graph from 1 records
+2025-10-24 20:06:32,347 - core.correlation.graph - INFO - Graph built: 0 nodes, 0 edges
+2025-10-24 20:06:32,348 - core.correlation.graph - INFO - Graph exported to results/entity_graph.json
+2025-10-24 20:06:32,349 - core.correlation.confidence - INFO - Computing threat confidence scores
+2025-10-24 20:06:32,349 - core.correlation.confidence - INFO - Computed scores for 0 entities
+2025-10-24 20:06:32,349 - core.correlation.embeddings - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-10-24 20:06:32,353 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-24 20:06:32,354 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-24 20:06:36,887 - core.correlation.embeddings - INFO - Generating embeddings for 1 records
+2025-10-24 20:06:36,887 - core.correlation.embeddings - INFO - Generated 0 embeddings
+2025-10-24 20:06:36,888 - core.correlation.embeddings - WARNING - No embeddings to save
+2025-10-24 20:06:36,888 - core.correlation.analytics - INFO - Generating analytics report
+2025-10-24 20:06:36,889 - core.correlation.analytics - INFO - Analytics saved to results/analytics.json
+2025-10-24 20:06:36,889 - GodEye - INFO - ✅ Normalization pipeline completed
+2025-10-24 20:06:36,897 - GodEye - INFO - ✅ Generated AI summary for 1 indicators
+2025-10-24 20:06:36,908 - godeye.api - ERROR - Failed to save output.json: Object of type DiGraph is not JSON serializable
+2025-10-24 20:06:36,909 - godeye.api - INFO - Analysis complete in 11.21s - 1 entities
+2025-10-24 20:06:36,910 - godeye.api - INFO - POST /api/search - Status: 200 - Time: 13.093s
+2025-10-24 20:46:47,265 - godeye.api - INFO - Successfully imported analyze_query from main.py
+2025-10-24 20:46:47,324 - godeye.api - INFO - Successfully imported analyze_query from main.py
+2025-10-24 20:46:47,330 - godeye.api - INFO - ============================================================
+2025-10-24 20:46:47,330 - godeye.api - INFO - GodEye OSINT API Server Starting...
+2025-10-24 20:46:47,330 - godeye.api - INFO - ============================================================
+2025-10-24 20:46:47,331 - godeye.api - INFO - Dashboard path: d:\God_eye\dashboard
+2025-10-24 20:46:47,331 - godeye.api - INFO - Dashboard exists: True
+2025-10-24 20:46:47,331 - godeye.api - INFO - Results directory initialized
+2025-10-24 20:46:47,331 - godeye.api - INFO - Server initialization complete
+2025-10-24 20:47:10,106 - godeye.api - INFO - OPTIONS /api/search - Status: 200 - Time: 0.001s
+2025-10-24 20:47:10,108 - godeye.api - INFO - OPTIONS /api/search - Status: 200 - Time: 0.002s
+2025-10-24 20:47:10,114 - godeye.api - INFO - Analysis request: zoho.com (type: auto)
+2025-10-24 20:47:10,115 - GodEye - INFO -  Starting analysis for: zoho.com (type: auto)
+2025-10-24 20:47:10,121 - GodEye - INFO -  Loaded collector: abuseipdb
+2025-10-24 20:47:10,124 - GodEye - WARNING -   No collect function in bing_search
+2025-10-24 20:47:10,128 - GodEye - INFO -  Loaded collector: crtsh
+2025-10-24 20:47:10,326 - GodEye - INFO -  Loaded collector: dns_lookup
+2025-10-24 20:47:10,331 - GodEye - INFO -  Loaded collector: duckduckgo
+2025-10-24 20:47:10,340 - GodEye - INFO -  Loaded collector: ghdb
+2025-10-24 20:47:10,350 - GodEye - INFO -  Loaded collector: github
+2025-10-24 20:47:10,354 - GodEye - WARNING -   No collect function in google_config
+2025-10-24 20:47:10,358 - GodEye - INFO -  Loaded collector: google_dorking
+2025-10-24 20:47:10,840 - GodEye - INFO -  Loaded collector: google_scraper
+2025-10-24 20:47:10,844 - GodEye - INFO -  Loaded collector: google_search
+2025-10-24 20:47:10,847 - GodEye - INFO -  Loaded collector: hibp
+2025-10-24 20:47:10,857 - GodEye - INFO -  Loaded collector: ipinfo
+2025-10-24 20:47:11,074 - GodEye - INFO -  Loaded collector: reddit
+2025-10-24 20:47:11,076 - GodEye - INFO -  Loaded collector: shodan
+2025-10-24 20:47:11,079 - GodEye - INFO -  Loaded collector: twitter
+2025-10-24 20:47:11,081 - GodEye - INFO -  Loaded collector: wayback
+2025-10-24 20:47:11,113 - GodEye - INFO -  Loaded collector: whois
+2025-10-24 20:47:11,119 - godeye.api - INFO - Analysis request: zoho.com (type: auto)
+2025-10-24 20:47:11,120 - GodEye - INFO -  Starting analysis for: zoho.com (type: auto)
+2025-10-24 20:47:11,123 - GodEye - INFO -  Loaded collector: abuseipdb
+2025-10-24 20:47:11,127 - GodEye - WARNING -   No collect function in bing_search
+2025-10-24 20:47:11,129 - GodEye - INFO -  Loaded collector: crtsh
+2025-10-24 20:47:11,133 - GodEye - INFO -  Loaded collector: dns_lookup
+2025-10-24 20:47:11,140 - GodEye - INFO -  Loaded collector: duckduckgo
+2025-10-24 20:47:11,142 - GodEye - INFO -  Loaded collector: ghdb
+2025-10-24 20:47:11,149 - GodEye - INFO -  Loaded collector: github
+2025-10-24 20:47:11,151 - GodEye - WARNING -   No collect function in google_config
+2025-10-24 20:47:11,155 - GodEye - INFO -  Loaded collector: google_dorking
+2025-10-24 20:47:11,157 - GodEye - INFO -  Loaded collector: google_scraper
+2025-10-24 20:47:11,160 - GodEye - INFO -  Loaded collector: google_search
+2025-10-24 20:47:11,163 - GodEye - INFO -  Loaded collector: hibp
+2025-10-24 20:47:11,169 - GodEye - INFO -  Loaded collector: ipinfo
+2025-10-24 20:47:11,175 - GodEye - INFO -  Loaded collector: reddit
+2025-10-24 20:47:11,177 - GodEye - INFO -  Loaded collector: shodan
+2025-10-24 20:47:11,184 - GodEye - INFO -  Loaded collector: twitter
+2025-10-24 20:47:11,187 - GodEye - INFO -  Loaded collector: wayback
+2025-10-24 20:47:11,189 - GodEye - INFO -  Loaded collector: whois
+2025-10-24 20:47:11,255 - GodEye - INFO -  Executing hibp for zoho.com
+2025-10-24 20:47:11,256 - GodEye - INFO -  Executing twitter for zoho.com
+2025-10-24 20:47:11,258 - GodEye - INFO -  Cache hit for google_scraper
+2025-10-24 20:47:11,259 - GodEye - INFO -  Cache hit for wayback
+2025-10-24 20:47:11,261 - GodEye - INFO -  Cache hit for wayback
+2025-10-24 20:47:11,263 - GodEye - INFO -  Cache hit for whois
+2025-10-24 20:47:11,264 - GodEye - INFO -  Executing crtsh for zoho.com
+2025-10-24 20:47:11,266 - GodEye - INFO -  Executing shodan for zoho.com
+2025-10-24 20:47:11,267 - GodEye - INFO -  Cache hit for reddit
+2025-10-24 20:47:11,269 - GodEye - INFO -  Cache hit for google_dorking
+2025-10-24 20:47:11,270 - GodEye - INFO -  Executing google_search for zoho.com
+2025-10-24 20:47:11,274 - GodEye - INFO -  Executing abuseipdb for zoho.com
+2025-10-24 20:47:11,274 - GodEye - INFO -  Executing ipinfo for zoho.com
+2025-10-24 20:47:11,275 - GodEye - INFO -  Cache hit for google_dorking
+2025-10-24 20:47:11,277 - GodEye - INFO -  Cache hit for ghdb
+2025-10-24 20:47:11,280 - GodEye - INFO -  Cache hit for ghdb
+2025-10-24 20:47:11,281 - GodEye - INFO -  Executing ipinfo for zoho.com
+2025-10-24 20:47:11,282 - GodEye - INFO -  Cache hit for google_scraper
+2025-10-24 20:47:11,283 - GodEye - INFO -  Executing google_search for zoho.com
+2025-10-24 20:47:11,286 - GodEye - INFO -  Executing crtsh for zoho.com
+2025-10-24 20:47:11,288 - GodEye - INFO -  Cache hit for whois
+2025-10-24 20:47:11,289 - GodEye - INFO -  Cache hit for dns_lookup
+2025-10-24 20:47:11,290 - GodEye - INFO -  Executing hibp for zoho.com
+2025-10-24 20:47:11,291 - GodEye - INFO -  Cache hit for reddit
+2025-10-24 20:47:11,293 - GodEye - INFO -  Cache hit for github
+2025-10-24 20:47:11,294 - GodEye - INFO -  Executing shodan for zoho.com
+2025-10-24 20:47:11,295 - GodEye - INFO -  Cache hit for dns_lookup
+2025-10-24 20:47:11,296 - GodEye - INFO -  Executing twitter for zoho.com
+2025-10-24 20:47:11,298 - GodEye - INFO -  Cache hit for duckduckgo
+2025-10-24 20:47:11,300 - GodEye - INFO -  Cache hit for github
+2025-10-24 20:47:11,301 - GodEye - INFO -  Executing abuseipdb for zoho.com
+2025-10-24 20:47:11,302 - GodEye - INFO -  Cache hit for duckduckgo
+2025-10-24 20:47:11,569 - GodEye - WARNING - Google Search API returned status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "errors": [
+      {
+        "message": "API key not valid. Please pass a valid API key.",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "customsearch.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2025-10-24 20:47:11,769 - GodEye - WARNING - Google Search API returned status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "errors": [
+      {
+        "message": "API key not valid. Please pass a valid API key.",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "customsearch.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2025-10-24 20:47:11,797 - GodEye - WARNING - Twitter API returned 401
+2025-10-24 20:47:11,799 - GodEye - WARNING - Twitter API returned 401
+2025-10-24 20:47:11,941 - GodEye - WARNING - Shodan API returned status 401
+2025-10-24 20:47:12,236 - GodEye - WARNING - Shodan API returned status 401
+2025-10-24 20:47:41,607 - GodEye - WARNING - crt.sh returned status 503
+2025-10-24 20:47:41,613 - GodEye - INFO -  Raw results saved to results/output.json
+2025-10-24 20:47:41,614 - core.correlation.graph - INFO - Building entity graph from 1 records
+2025-10-24 20:47:41,615 - core.correlation.graph - INFO - Graph built: 0 nodes, 0 edges
+2025-10-24 20:47:41,616 - core.correlation.graph - INFO - Graph exported to results/entity_graph.json
+2025-10-24 20:47:41,616 - core.correlation.confidence - INFO - Computing threat confidence scores
+2025-10-24 20:47:41,616 - core.correlation.confidence - INFO - Computed scores for 0 entities
+2025-10-24 20:47:41,617 - core.correlation.embeddings - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-10-24 20:47:41,619 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-24 20:47:41,619 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-24 20:47:45,721 - core.correlation.embeddings - INFO - Generating embeddings for 1 records
+2025-10-24 20:47:45,722 - core.correlation.embeddings - INFO - Generated 0 embeddings
+2025-10-24 20:47:45,722 - core.correlation.embeddings - WARNING - No embeddings to save
+2025-10-24 20:47:45,722 - core.correlation.analytics - INFO - Generating analytics report
+2025-10-24 20:47:45,723 - core.correlation.analytics - INFO - Analytics saved to results/analytics.json
+2025-10-24 20:47:45,723 - GodEye - INFO -  Normalization pipeline completed
+2025-10-24 20:47:45,724 - GodEye - INFO -  Generated AI summary for 1 indicators
+2025-10-24 20:47:45,727 - godeye.api - ERROR - Failed to save output.json: Object of type DiGraph is not JSON serializable
+2025-10-24 20:47:45,728 - godeye.api - INFO - Analysis complete in 34.61s - 1 entities
+2025-10-24 20:47:45,731 - godeye.api - INFO - POST /api/search - Status: 200 - Time: 35.620s
+2025-10-24 20:47:45,732 - GodEye - ERROR - crt.sh collection failed: 
+2025-10-24 20:47:45,735 - GodEye - INFO -  Raw results saved to results/output.json
+2025-10-24 20:47:45,735 - core.correlation.graph - INFO - Building entity graph from 1 records
+2025-10-24 20:47:45,736 - core.correlation.graph - INFO - Graph built: 0 nodes, 0 edges
+2025-10-24 20:47:45,736 - core.correlation.graph - INFO - Graph exported to results/entity_graph.json
+2025-10-24 20:47:45,736 - core.correlation.confidence - INFO - Computing threat confidence scores
+2025-10-24 20:47:45,737 - core.correlation.confidence - INFO - Computed scores for 0 entities
+2025-10-24 20:47:45,737 - core.correlation.embeddings - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-10-24 20:47:45,739 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-24 20:47:45,739 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-24 20:47:49,148 - core.correlation.embeddings - INFO - Generating embeddings for 1 records
+2025-10-24 20:47:49,149 - core.correlation.embeddings - INFO - Generated 0 embeddings
+2025-10-24 20:47:49,149 - core.correlation.embeddings - WARNING - No embeddings to save
+2025-10-24 20:47:49,149 - core.correlation.analytics - INFO - Generating analytics report
+2025-10-24 20:47:49,150 - core.correlation.analytics - INFO - Analytics saved to results/analytics.json
+2025-10-24 20:47:49,151 - GodEye - INFO -  Normalization pipeline completed
+2025-10-24 20:47:49,153 - GodEye - INFO -  Generated AI summary for 1 indicators
+2025-10-24 20:47:49,158 - godeye.api - ERROR - Failed to save output.json: Object of type DiGraph is not JSON serializable
+2025-10-24 20:47:49,159 - godeye.api - INFO - Analysis complete in 39.04s - 1 entities
+2025-10-24 20:47:49,160 - godeye.api - INFO - POST /api/search - Status: 200 - Time: 39.050s
+2025-10-24 20:56:10,779 - godeye.api - INFO - Analysis request: binaryshield.in (type: auto)
+2025-10-24 20:56:10,780 - GodEye - INFO -  Starting analysis for: binaryshield.in (type: auto)
+2025-10-24 20:56:10,783 - GodEye - INFO -  Loaded collector: abuseipdb
+2025-10-24 20:56:10,785 - GodEye - WARNING -   No collect function in bing_search
+2025-10-24 20:56:10,786 - GodEye - INFO -  Loaded collector: crtsh
+2025-10-24 20:56:10,787 - GodEye - INFO -  Loaded collector: dns_lookup
+2025-10-24 20:56:10,793 - GodEye - INFO -  Loaded collector: duckduckgo
+2025-10-24 20:56:10,796 - GodEye - INFO -  Loaded collector: ghdb
+2025-10-24 20:56:10,807 - GodEye - INFO -  Loaded collector: github
+2025-10-24 20:56:10,809 - GodEye - WARNING -   No collect function in google_config
+2025-10-24 20:56:10,815 - GodEye - INFO -  Loaded collector: google_dorking
+2025-10-24 20:56:10,817 - GodEye - INFO -  Loaded collector: google_scraper
+2025-10-24 20:56:10,821 - GodEye - INFO -  Loaded collector: google_search
+2025-10-24 20:56:10,823 - GodEye - INFO -  Loaded collector: hibp
+2025-10-24 20:56:10,830 - GodEye - INFO -  Loaded collector: ipinfo
+2025-10-24 20:56:10,837 - GodEye - INFO -  Loaded collector: reddit
+2025-10-24 20:56:10,839 - GodEye - INFO -  Loaded collector: shodan
+2025-10-24 20:56:10,845 - GodEye - INFO -  Loaded collector: twitter
+2025-10-24 20:56:10,847 - GodEye - INFO -  Loaded collector: wayback
+2025-10-24 20:56:10,849 - GodEye - INFO -  Loaded collector: whois
+2025-10-24 20:56:10,851 - godeye.api - INFO - Analysis request: binaryshield.in (type: auto)
+2025-10-24 20:56:10,851 - GodEye - INFO -  Starting analysis for: binaryshield.in (type: auto)
+2025-10-24 20:56:10,854 - GodEye - INFO -  Loaded collector: abuseipdb
+2025-10-24 20:56:10,856 - GodEye - WARNING -   No collect function in bing_search
+2025-10-24 20:56:10,861 - GodEye - INFO -  Loaded collector: crtsh
+2025-10-24 20:56:10,863 - GodEye - INFO -  Loaded collector: dns_lookup
+2025-10-24 20:56:10,871 - GodEye - INFO -  Loaded collector: duckduckgo
+2025-10-24 20:56:10,873 - GodEye - INFO -  Loaded collector: ghdb
+2025-10-24 20:56:10,879 - GodEye - INFO -  Loaded collector: github
+2025-10-24 20:56:10,882 - GodEye - WARNING -   No collect function in google_config
+2025-10-24 20:56:10,884 - GodEye - INFO -  Loaded collector: google_dorking
+2025-10-24 20:56:10,885 - GodEye - INFO -  Loaded collector: google_scraper
+2025-10-24 20:56:10,887 - GodEye - INFO -  Loaded collector: google_search
+2025-10-24 20:56:10,889 - GodEye - INFO -  Loaded collector: hibp
+2025-10-24 20:56:10,895 - GodEye - INFO -  Loaded collector: ipinfo
+2025-10-24 20:56:10,902 - GodEye - INFO -  Loaded collector: reddit
+2025-10-24 20:56:10,904 - GodEye - INFO -  Loaded collector: shodan
+2025-10-24 20:56:10,910 - GodEye - INFO -  Loaded collector: twitter
+2025-10-24 20:56:10,911 - GodEye - INFO -  Loaded collector: wayback
+2025-10-24 20:56:10,913 - GodEye - INFO -  Loaded collector: whois
+2025-10-24 20:56:10,942 - GodEye - INFO -  Executing abuseipdb for binaryshield.in
+2025-10-24 20:56:10,944 - GodEye - INFO -  Executing hibp for binaryshield.in
+2025-10-24 20:56:10,945 - GodEye - INFO -  Cache hit for ghdb
+2025-10-24 20:56:10,946 - GodEye - INFO -  Cache hit for crtsh
+2025-10-24 20:56:10,946 - GodEye - INFO -  Cache hit for reddit
+2025-10-24 20:56:10,947 - GodEye - INFO -  Executing ipinfo for binaryshield.in
+2025-10-24 20:56:10,947 - GodEye - INFO -  Executing twitter for binaryshield.in
+2025-10-24 20:56:10,949 - GodEye - INFO -  Cache hit for wayback
+2025-10-24 20:56:10,951 - GodEye - INFO -  Cache hit for duckduckgo
+2025-10-24 20:56:10,952 - GodEye - INFO -  Cache hit for dns_lookup
+2025-10-24 20:56:10,952 - GodEye - INFO -  Executing shodan for binaryshield.in
+2025-10-24 20:56:10,953 - GodEye - INFO -  Cache hit for google_scraper
+2025-10-24 20:56:10,957 - GodEye - INFO -  Cache hit for google_dorking
+2025-10-24 20:56:10,958 - GodEye - INFO -  Executing google_search for binaryshield.in
+2025-10-24 20:56:10,959 - GodEye - INFO -  Executing google_search for binaryshield.in
+2025-10-24 20:56:10,960 - GodEye - INFO -  Executing twitter for binaryshield.in
+2025-10-24 20:56:10,963 - GodEye - INFO -  Cache hit for github
+2025-10-24 20:56:10,964 - GodEye - INFO -  Cache hit for google_scraper
+2025-10-24 20:56:10,965 - GodEye - INFO -  Cache hit for crtsh
+2025-10-24 20:56:10,966 - GodEye - INFO -  Cache hit for reddit
+2025-10-24 20:56:10,966 - GodEye - INFO -  Cache hit for github
+2025-10-24 20:56:10,968 - GodEye - INFO -  Cache hit for google_dorking
+2025-10-24 20:56:10,969 - GodEye - INFO -  Cache hit for wayback
+2025-10-24 20:56:10,970 - GodEye - INFO -  Cache hit for duckduckgo
+2025-10-24 20:56:10,971 - GodEye - INFO -  Cache hit for whois
+2025-10-24 20:56:10,972 - GodEye - INFO -  Cache hit for whois
+2025-10-24 20:56:10,972 - GodEye - INFO -  Executing hibp for binaryshield.in
+2025-10-24 20:56:10,973 - GodEye - INFO -  Cache hit for dns_lookup
+2025-10-24 20:56:10,974 - GodEye - INFO -  Cache hit for ghdb
+2025-10-24 20:56:10,977 - GodEye - INFO -  Executing abuseipdb for binaryshield.in
+2025-10-24 20:56:10,978 - GodEye - INFO -  Executing shodan for binaryshield.in
+2025-10-24 20:56:10,979 - GodEye - INFO -  Executing ipinfo for binaryshield.in
+2025-10-24 20:56:11,200 - GodEye - WARNING - Google Search API returned status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "errors": [
+      {
+        "message": "API key not valid. Please pass a valid API key.",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "customsearch.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2025-10-24 20:56:11,364 - GodEye - WARNING - Twitter API returned 401
+2025-10-24 20:56:11,400 - GodEye - WARNING - Shodan API returned status 401
+2025-10-24 20:56:11,402 - GodEye - WARNING - Twitter API returned 401
+2025-10-24 20:56:11,470 - GodEye - WARNING - Google Search API returned status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "errors": [
+      {
+        "message": "API key not valid. Please pass a valid API key.",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "customsearch.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2025-10-24 20:56:11,477 - GodEye - INFO -  Raw results saved to results/output.json
+2025-10-24 20:56:11,479 - core.correlation.graph - INFO - Building entity graph from 1 records
+2025-10-24 20:56:11,480 - core.correlation.graph - INFO - Graph built: 0 nodes, 0 edges
+2025-10-24 20:56:11,482 - core.correlation.graph - INFO - Graph exported to results/entity_graph.json
+2025-10-24 20:56:11,483 - core.correlation.confidence - INFO - Computing threat confidence scores
+2025-10-24 20:56:11,485 - core.correlation.confidence - INFO - Computed scores for 0 entities
+2025-10-24 20:56:11,485 - core.correlation.embeddings - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-10-24 20:56:11,492 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-24 20:56:11,493 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-24 20:56:15,999 - core.correlation.embeddings - INFO - Generating embeddings for 1 records
+2025-10-24 20:56:16,000 - core.correlation.embeddings - INFO - Generated 0 embeddings
+2025-10-24 20:56:16,000 - core.correlation.embeddings - WARNING - No embeddings to save
+2025-10-24 20:56:16,001 - core.correlation.analytics - INFO - Generating analytics report
+2025-10-24 20:56:16,001 - core.correlation.analytics - INFO - Analytics saved to results/analytics.json
+2025-10-24 20:56:16,003 - GodEye - INFO -  Normalization pipeline completed
+2025-10-24 20:56:16,004 - GodEye - INFO -  Generated AI summary for 1 indicators
+2025-10-24 20:56:16,006 - godeye.api - ERROR - Failed to save output.json: Object of type DiGraph is not JSON serializable
+2025-10-24 20:56:16,006 - godeye.api - INFO - Analysis complete in 5.15s - 1 entities
+2025-10-24 20:56:16,007 - godeye.api - INFO - POST /api/search - Status: 200 - Time: 5.229s
+2025-10-24 20:56:16,009 - GodEye - WARNING - Shodan API returned status 401
+2025-10-24 20:56:16,011 - GodEye - INFO -  Raw results saved to results/output.json
+2025-10-24 20:56:16,012 - core.correlation.graph - INFO - Building entity graph from 1 records
+2025-10-24 20:56:16,012 - core.correlation.graph - INFO - Graph built: 0 nodes, 0 edges
+2025-10-24 20:56:16,013 - core.correlation.graph - INFO - Graph exported to results/entity_graph.json
+2025-10-24 20:56:16,013 - core.correlation.confidence - INFO - Computing threat confidence scores
+2025-10-24 20:56:16,013 - core.correlation.confidence - INFO - Computed scores for 0 entities
+2025-10-24 20:56:16,014 - core.correlation.embeddings - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-10-24 20:56:16,015 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-24 20:56:16,015 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-24 20:56:19,899 - core.correlation.embeddings - INFO - Generating embeddings for 1 records
+2025-10-24 20:56:19,900 - core.correlation.embeddings - INFO - Generated 0 embeddings
+2025-10-24 20:56:19,900 - core.correlation.embeddings - WARNING - No embeddings to save
+2025-10-24 20:56:19,900 - core.correlation.analytics - INFO - Generating analytics report
+2025-10-24 20:56:19,901 - core.correlation.analytics - INFO - Analytics saved to results/analytics.json
+2025-10-24 20:56:19,901 - GodEye - INFO -  Normalization pipeline completed
+2025-10-24 20:56:19,901 - GodEye - INFO -  Generated AI summary for 1 indicators
+2025-10-24 20:56:19,903 - godeye.api - ERROR - Failed to save output.json: Object of type DiGraph is not JSON serializable
+2025-10-24 20:56:19,904 - godeye.api - INFO - Analysis complete in 9.12s - 1 entities
+2025-10-24 20:56:19,904 - godeye.api - INFO - POST /api/search - Status: 200 - Time: 9.127s
+2025-10-24 20:59:39,371 - godeye.api - INFO - OPTIONS /api/search - Status: 200 - Time: 0.001s
+2025-10-24 20:59:39,372 - godeye.api - INFO - OPTIONS /api/search - Status: 200 - Time: 0.002s
+2025-10-24 20:59:39,376 - godeye.api - INFO - Analysis request: kkc.edu.in (type: auto)
+2025-10-24 20:59:39,377 - GodEye - INFO -  Starting analysis for: kkc.edu.in (type: auto)
+2025-10-24 20:59:39,381 - GodEye - INFO -  Loaded collector: abuseipdb
+2025-10-24 20:59:39,384 - GodEye - WARNING -   No collect function in bing_search
+2025-10-24 20:59:39,389 - GodEye - INFO -  Loaded collector: crtsh
+2025-10-24 20:59:39,391 - GodEye - INFO -  Loaded collector: dns_lookup
+2025-10-24 20:59:39,399 - GodEye - INFO -  Loaded collector: duckduckgo
+2025-10-24 20:59:39,402 - GodEye - INFO -  Loaded collector: ghdb
+2025-10-24 20:59:39,408 - GodEye - INFO -  Loaded collector: github
+2025-10-24 20:59:39,412 - GodEye - WARNING -   No collect function in google_config
+2025-10-24 20:59:39,414 - GodEye - INFO -  Loaded collector: google_dorking
+2025-10-24 20:59:39,416 - GodEye - INFO -  Loaded collector: google_scraper
+2025-10-24 20:59:39,419 - GodEye - INFO -  Loaded collector: google_search
+2025-10-24 20:59:39,420 - GodEye - INFO -  Loaded collector: hibp
+2025-10-24 20:59:39,430 - GodEye - INFO -  Loaded collector: ipinfo
+2025-10-24 20:59:39,436 - GodEye - INFO -  Loaded collector: reddit
+2025-10-24 20:59:39,439 - GodEye - INFO -  Loaded collector: shodan
+2025-10-24 20:59:39,445 - GodEye - INFO -  Loaded collector: twitter
+2025-10-24 20:59:39,447 - GodEye - INFO -  Loaded collector: wayback
+2025-10-24 20:59:39,449 - GodEye - INFO -  Loaded collector: whois
+2025-10-24 20:59:39,451 - godeye.api - INFO - Analysis request: kkc.edu.in (type: auto)
+2025-10-24 20:59:39,451 - GodEye - INFO -  Starting analysis for: kkc.edu.in (type: auto)
+2025-10-24 20:59:39,455 - GodEye - INFO -  Loaded collector: abuseipdb
+2025-10-24 20:59:39,456 - GodEye - WARNING -   No collect function in bing_search
+2025-10-24 20:59:39,458 - GodEye - INFO -  Loaded collector: crtsh
+2025-10-24 20:59:39,461 - GodEye - INFO -  Loaded collector: dns_lookup
+2025-10-24 20:59:39,467 - GodEye - INFO -  Loaded collector: duckduckgo
+2025-10-24 20:59:39,468 - GodEye - INFO -  Loaded collector: ghdb
+2025-10-24 20:59:39,474 - GodEye - INFO -  Loaded collector: github
+2025-10-24 20:59:39,475 - GodEye - WARNING -   No collect function in google_config
+2025-10-24 20:59:39,477 - GodEye - INFO -  Loaded collector: google_dorking
+2025-10-24 20:59:39,479 - GodEye - INFO -  Loaded collector: google_scraper
+2025-10-24 20:59:39,481 - GodEye - INFO -  Loaded collector: google_search
+2025-10-24 20:59:39,483 - GodEye - INFO -  Loaded collector: hibp
+2025-10-24 20:59:39,489 - GodEye - INFO -  Loaded collector: ipinfo
+2025-10-24 20:59:39,495 - GodEye - INFO -  Loaded collector: reddit
+2025-10-24 20:59:39,497 - GodEye - INFO -  Loaded collector: shodan
+2025-10-24 20:59:39,502 - GodEye - INFO -  Loaded collector: twitter
+2025-10-24 20:59:39,504 - GodEye - INFO -  Loaded collector: wayback
+2025-10-24 20:59:39,505 - GodEye - INFO -  Loaded collector: whois
+2025-10-24 20:59:39,539 - GodEye - INFO -  Executing abuseipdb for kkc.edu.in
+2025-10-24 20:59:39,540 - GodEye - INFO -  Cache hit for google_dorking
+2025-10-24 20:59:39,540 - GodEye - INFO -  Executing twitter for kkc.edu.in
+2025-10-24 20:59:39,542 - GodEye - INFO -  Executing shodan for kkc.edu.in
+2025-10-24 20:59:39,542 - GodEye - INFO -  Executing hibp for kkc.edu.in
+2025-10-24 20:59:39,543 - GodEye - INFO -  Executing google_search for kkc.edu.in
+2025-10-24 20:59:39,544 - GodEye - INFO -  Cache hit for crtsh
+2025-10-24 20:59:39,544 - GodEye - INFO -  Cache hit for github
+2025-10-24 20:59:39,545 - GodEye - INFO -  Executing ipinfo for kkc.edu.in
+2025-10-24 20:59:39,546 - GodEye - INFO -  Cache hit for duckduckgo
+2025-10-24 20:59:39,547 - GodEye - INFO -  Cache hit for google_scraper
+2025-10-24 20:59:39,547 - GodEye - INFO -  Cache hit for wayback
+2025-10-24 20:59:39,549 - GodEye - INFO -  Cache hit for dns_lookup
+2025-10-24 20:59:39,550 - GodEye - INFO -  Cache hit for reddit
+2025-10-24 20:59:39,551 - GodEye - INFO -  Executing ipinfo for kkc.edu.in
+2025-10-24 20:59:39,552 - GodEye - INFO -  Cache hit for ghdb
+2025-10-24 20:59:39,553 - GodEye - INFO -  Cache hit for ghdb
+2025-10-24 20:59:39,553 - GodEye - INFO -  Executing google_search for kkc.edu.in
+2025-10-24 20:59:39,555 - GodEye - INFO -  Cache hit for google_scraper
+2025-10-24 20:59:39,556 - GodEye - INFO -  Cache hit for dns_lookup
+2025-10-24 20:59:39,557 - GodEye - INFO -  Cache hit for reddit
+2025-10-24 20:59:39,558 - GodEye - INFO -  Cache hit for crtsh
+2025-10-24 20:59:39,558 - GodEye - INFO -  Cache hit for github
+2025-10-24 20:59:39,559 - GodEye - INFO -  Executing twitter for kkc.edu.in
+2025-10-24 20:59:39,560 - GodEye - INFO -  Executing shodan for kkc.edu.in
+2025-10-24 20:59:39,561 - GodEye - INFO -  Executing hibp for kkc.edu.in
+2025-10-24 20:59:39,563 - GodEye - INFO -  Cache hit for duckduckgo
+2025-10-24 20:59:39,564 - GodEye - INFO -  Cache hit for whois
+2025-10-24 20:59:39,565 - GodEye - INFO -  Cache hit for wayback
+2025-10-24 20:59:39,565 - GodEye - INFO -  Cache hit for whois
+2025-10-24 20:59:39,566 - GodEye - INFO -  Cache hit for google_dorking
+2025-10-24 20:59:39,566 - GodEye - INFO -  Executing abuseipdb for kkc.edu.in
+2025-10-24 20:59:39,785 - GodEye - WARNING - Google Search API returned status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "errors": [
+      {
+        "message": "API key not valid. Please pass a valid API key.",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "customsearch.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2025-10-24 20:59:39,893 - GodEye - WARNING - Shodan API returned status 401
+2025-10-24 20:59:39,917 - GodEye - WARNING - Shodan API returned status 401
+2025-10-24 20:59:39,952 - GodEye - WARNING - Twitter API returned 401
+2025-10-24 20:59:39,990 - GodEye - WARNING - Twitter API returned 401
+2025-10-24 20:59:39,995 - GodEye - INFO -  Raw results saved to results/output.json
+2025-10-24 20:59:39,996 - core.correlation.graph - INFO - Building entity graph from 1 records
+2025-10-24 20:59:39,997 - core.correlation.graph - INFO - Graph built: 0 nodes, 0 edges
+2025-10-24 20:59:39,998 - core.correlation.graph - INFO - Graph exported to results/entity_graph.json
+2025-10-24 20:59:40,000 - core.correlation.confidence - INFO - Computing threat confidence scores
+2025-10-24 20:59:40,002 - core.correlation.confidence - INFO - Computed scores for 0 entities
+2025-10-24 20:59:40,003 - core.correlation.embeddings - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-10-24 20:59:40,010 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-24 20:59:40,011 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-24 20:59:44,012 - core.correlation.embeddings - INFO - Generating embeddings for 1 records
+2025-10-24 20:59:44,012 - core.correlation.embeddings - INFO - Generated 0 embeddings
+2025-10-24 20:59:44,013 - core.correlation.embeddings - WARNING - No embeddings to save
+2025-10-24 20:59:44,013 - core.correlation.analytics - INFO - Generating analytics report
+2025-10-24 20:59:44,014 - core.correlation.analytics - INFO - Analytics saved to results/analytics.json
+2025-10-24 20:59:44,014 - GodEye - INFO -  Normalization pipeline completed
+2025-10-24 20:59:44,014 - GodEye - INFO -  Generated AI summary for 1 indicators
+2025-10-24 20:59:44,017 - godeye.api - ERROR - Failed to save output.json: Object of type DiGraph is not JSON serializable
+2025-10-24 20:59:44,017 - godeye.api - INFO - Analysis complete in 4.57s - 1 entities
+2025-10-24 20:59:44,018 - godeye.api - INFO - POST /api/search - Status: 200 - Time: 4.642s
+2025-10-24 20:59:44,018 - GodEye - WARNING - Google Search API returned status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "errors": [
+      {
+        "message": "API key not valid. Please pass a valid API key.",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "customsearch.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2025-10-24 20:59:44,021 - GodEye - INFO -  Raw results saved to results/output.json
+2025-10-24 20:59:44,022 - core.correlation.graph - INFO - Building entity graph from 1 records
+2025-10-24 20:59:44,022 - core.correlation.graph - INFO - Graph built: 0 nodes, 0 edges
+2025-10-24 20:59:44,023 - core.correlation.graph - INFO - Graph exported to results/entity_graph.json
+2025-10-24 20:59:44,023 - core.correlation.confidence - INFO - Computing threat confidence scores
+2025-10-24 20:59:44,024 - core.correlation.confidence - INFO - Computed scores for 0 entities
+2025-10-24 20:59:44,024 - core.correlation.embeddings - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-10-24 20:59:44,025 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-10-24 20:59:44,026 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-24 20:59:47,935 - core.correlation.embeddings - INFO - Generating embeddings for 1 records
+2025-10-24 20:59:47,935 - core.correlation.embeddings - INFO - Generated 0 embeddings
+2025-10-24 20:59:47,936 - core.correlation.embeddings - WARNING - No embeddings to save
+2025-10-24 20:59:47,936 - core.correlation.analytics - INFO - Generating analytics report
+2025-10-24 20:59:47,937 - core.correlation.analytics - INFO - Analytics saved to results/analytics.json
+2025-10-24 20:59:47,937 - GodEye - INFO -  Normalization pipeline completed
+2025-10-24 20:59:47,938 - GodEye - INFO -  Generated AI summary for 1 indicators
+2025-10-24 20:59:47,942 - godeye.api - ERROR - Failed to save output.json: Object of type DiGraph is not JSON serializable
+2025-10-24 20:59:47,942 - godeye.api - INFO - Analysis complete in 8.57s - 1 entities
+2025-10-24 20:59:47,943 - godeye.api - INFO - POST /api/search - Status: 200 - Time: 8.569s

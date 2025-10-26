@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Entity Schema",
+  "description": "Defines recognized entity structure for correlation and enrichment pipeline.",
+  "type": "object",
+  "properties": {
+    "entity_id": {
+      "type": "string",
+      "description": "Unique identifier for the entity (UUID or hash)."
+    },
+    "entity_type": {
+      "type": "string",
+      "enum": ["domain", "ip", "email", "username", "person", "image"],
+      "description": "Type of entity detected."
+    },
+    "value": {
+      "type": "string",
+      "description": "Actual entity value (e.g., example.com, 8.8.8.8, john.doe@example.com)."
+    },
+    "attributes": {
+      "type": "object",
+      "description": "Metadata or extracted information related to the entity.",
+      "properties": {
+        "source": { "type": ["string", "null"] },
+        "country": { "type": ["string", "null"] },
+        "asn": { "type": ["string", "null"] },
+        "organization": { "type": ["string", "null"] },
+        "timestamp": { "type": ["string", "null"], "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "relations": {
+      "type": "array",
+      "description": "Connections to other entities discovered.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "relation_type": { "type": "string" },
+          "target_entity": { "type": "string" }
+        },
+        "required": ["relation_type", "target_entity"]
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "System confidence score of entity accuracy."
+    }
+  },
+  "required": ["entity_id", "entity_type", "value"],
+  "additionalProperties": false
+}

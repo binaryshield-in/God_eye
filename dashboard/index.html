@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GodEye — AI-Powered OSINT Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --panel:#0f0f0f;
+      --muted:#adadad;
+      --accent:#ff0000;
+      --glass: rgba(255,255,255,0.03);
+    }
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    body{background:var(--bg);color:var(--muted);display:flex;flex-direction:column;}
+
+    /* Header Styles */
+    header {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(11, 11, 11, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .brand {
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .brand:hover {
+      opacity: 0.8;
+    }
+
+    .view-more-btn {
+      background-color: var(--accent);
+      color: #FFFFFF;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .view-more-btn:hover {
+      background-color: #cc0000;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+    }
+
+    /* Main Content */
+    .main-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container{width:100%;max-width:980px;padding:32px}
+    .header-section{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+    .brand-large{font-weight:800;letter-spacing:1px;font-size:28px;color:var(--accent)}
+    .tagline{color:var(--muted);font-size:14px}
+
+    .panel{background:linear-gradient(180deg,var(--panel),#0b0b0b);border-radius:14px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+
+    .search-row{display:flex;gap:12px;align-items:stretch}
+    .search-input{flex:1;background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:12px 14px;border-radius:10px;color:#fff;font-size:16px;outline:none;transition:all 0.3s}
+    .search-input::placeholder{color:rgba(255,255,255,0.5)}
+    .search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,0,0,0.1)}
+    
+    .type-selector{
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,0.04);
+      padding:12px;
+      border-radius:10px;
+      color:var(--muted);
+      cursor:pointer;
+      outline:none;
+      font-size:14px;
+      transition:all 0.3s;
+    }
+    .type-selector:focus{border-color:var(--accent)}
+    
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 20px;border-radius:10px;color:var(--muted);cursor:pointer;font-size:15px;font-weight:600;transition:all 0.3s}
+    .btn:hover{background:rgba(255,255,255,0.05)}
+    .btn.primary{background:var(--accent);color:#fff;border:0}
+    .btn.primary:hover{background:#cc0000;box-shadow:0 4px 12px rgba(255,0,0,0.4)}
+    .btn:disabled{opacity:0.5;cursor:not-allowed}
+
+    .search-controls{display:flex;gap:8px;margin-top:12px;align-items:center;flex-wrap:wrap}
+
+    .image-search-area{margin-top:12px;display:none;flex-direction:column;align-items:center}
+    .image-preview{width:100%;max-width:350px;min-height:80px;border-radius:8px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.35);font-size:12px;margin-top:15px;overflow:hidden}
+
+    #dropZone{width:100%;text-align:center;color:rgba(255,255,255,0.6);padding:40px;border:2px dashed rgba(255,0,0,0.4);border-radius:10px;cursor:pointer;transition:all 0.3s}
+    #dropZone:hover{border-color:var(--accent);background:rgba(255,0,0,0.05)}
+    #dropZone.drag-over{border-color:var(--accent);background:rgba(255,0,0,0.1)}
+    
+    #imgSearchBtn{margin-top:10px;background-color:#ff0000;color:#fff;padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s}
+    #imgSearchBtn:hover{background-color:#cc0000;transform:translateY(-1px)}
+
+    /* Loading Overlay */
+    .loading-overlay{
+      display:none;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.9);
+      z-index:1000;
+      align-items:center;
+      justify-content:center;
+      backdrop-filter:blur(10px);
+    }
+    .loading-overlay.active{display:flex}
+    
+    .loading-content{text-align:center}
+    .spinner{width:50px;height:50px;border:4px solid rgba(255,255,255,0.1);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .loading-text{font-size:18px;color:#fff;margin-bottom:8px}
+    .loading-subtext{font-size:14px;color:var(--muted)}
+
+    /* Footer Styles */
+    footer {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 12px 0;
+      margin-top: auto;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-icon {
+      width: 18px;
+      height: 18px;
+      color: #ff0000;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .social-icon:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      color: #6B7280;
+      font-size: 12px;
+    }
+
+    /* Toast Notifications */
+    .toast-container{position:fixed;top:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:10px}
+    .toast{min-width:300px;padding:16px 20px;background:var(--panel);border-left:4px solid var(--accent);border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.6);color:#fff;animation:slideIn 0.3s ease}
+    .toast.success{border-left-color:#00ff88}
+    .toast.error{border-left-color:#ff3366}
+    @keyframes slideIn{from{transform:translateX(400px);opacity:0}to{transform:translateX(0);opacity:1}}
+
+    /* Responsive */
+    @media (max-width:768px){
+      .container{padding:18px}
+      .brand-large{font-size:22px}
+      .search-row{flex-direction:column}
+      .btn{width:100%}
+      .header-container, .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      .search-controls{flex-direction:column;align-items:stretch}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="https://binaryshield.in" class="brand">Binary Shield</a>
+      <a href="https://hacking-tools-scripts.binaryshield.in/" class="view-more-btn">explore more</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="container">
+      <div class="header-section">
+        <div class="brand-large">GOD_EYE</div>
+        <div class="tagline">AI-powered OSINT — automated reconnaissance & correlation</div>
+      </div>
+
+      <div class="panel" role="region" aria-label="Search panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <div style="color:var(--muted);font-size:13px">Enter a name, company, domain, email or IP</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.25)">godeye_version 1.0</div>
+        </div>
+
+        <form id="searchForm">
+          <div class="search-row">
+            <input 
+              id="q" 
+              class="search-input" 
+              type="search" 
+              placeholder="Search — e.g., &quot;john doe&quot;, &quot;example.com&quot;, or &quot;8.8.8.8&quot;" 
+              aria-label="Search query"
+              required
+            />
+            <select id="typeSelector" class="type-selector" style="background-color: #000000;" aria-label="Query type">
+              <option value="auto">Auto-detect</option>
+              <option value="domain">Domain</option>
+              <option value="ip">IP Address</option>
+              <option value="email">Email</option>
+            </select>
+            <button type="submit" id="searchBtn" class="btn primary" aria-label="Start search">
+              <i class="fas fa-search" style="margin-right:6px"></i>Search
+            </button>
+            <!-- <button type="button" id="imgToggle" class="btn" aria-pressed="false" title="Toggle image search">
+              <i class="fas fa-image" style="margin-right:6px"></i>Image
+            </button> -->
+          </div>
+        </form>
+
+        <!-- Drag-and-drop Image Search -->
+        <!-- <div id="imageArea" class="image-search-area">
+          <div id="dropZone">
+            <i class="fas fa-cloud-upload-alt" style="font-size:32px;margin-bottom:10px;display:block;color:var(--accent)"></i>
+            Drag & Drop an image here or click to upload
+          </div>
+          <input id="imgInput" type="file" accept="image/*" aria-label="Upload image" style="display:none" />
+          <div id="preview" class="image-preview">No image selected</div>
+          <button id="imgSearchBtn">
+            <i class="fas fa-search" style="margin-right:6px"></i>Search by Image
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <div class="loading-text">Analyzing threat intelligence...</div>
+      <div class="loading-subtext">Collecting data from multiple sources</div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="social-icons">
+        <a href="https://facebook.com/binaryshield" target="_blank" aria-label="Facebook">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a href="https://twitter.com/binaryshield" target="_blank" aria-label="Twitter">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+          </svg>
+        </a>
+        <a href="https://instagram.com/binaryshield" target="_blank" aria-label="Instagram">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+      <p class="copyright">© 2025 Binary Shield. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ═══════════════════════════════════════════════════════════
+    // CONFIGURATION
+    // ═══════════════════════════════════════════════════════════
+    const CONFIG = {
+      API_BASE_URL: 'http://localhost:5000',
+      API_ENDPOINT: '/api/search',
+      STORAGE_KEY: 'godeyeResults',
+      REQUEST_TIMEOUT: 60000
+    };
+
+    // ═══════════════════════════════════════════════════════════
+    // DOM ELEMENTS
+    // ═══════════════════════════════════════════════════════════
+    const imgToggle = document.getElementById('imgToggle');
+    const imageArea = document.getElementById('imageArea');
+    const imgInput = document.getElementById('imgInput');
+    const preview = document.getElementById('preview');
+    const searchBtn = document.getElementById('searchBtn');
+    const imgSearchBtn = document.getElementById('imgSearchBtn');
+    const dropZone = document.getElementById('dropZone');
+    const q = document.getElementById('q');
+    const typeSelector = document.getElementById('typeSelector');
+    const searchForm = document.getElementById('searchForm');
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const toastContainer = document.getElementById('toastContainer');
+
+    let selectedFile = null;
+
+    // ═══════════════════════════════════════════════════════════
+    // IMAGE UPLOAD FUNCTIONALITY
+    // ═══════════════════════════════════════════════════════════
+    
+    imgToggle.addEventListener('click', () => {
+      const visible = imageArea.style.display === 'flex';
+      imageArea.style.display = visible ? 'none' : 'flex';
+      imgToggle.setAttribute('aria-pressed', (!visible).toString());
+    });
+
+    dropZone.addEventListener('click', () => imgInput.click());
+    
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('drag-over');
+    });
+    
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('drag-over');
+    });
+    
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('drag-over');
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        handleImage(files[0]);
+      }
+    });
+
+    imgInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        handleImage(e.target.files[0]);
+      }
+    });
+
+    function handleImage(file) {
+      // Validate file size (10MB max)
+      if (file.size > 10 * 1024 * 1024) {
+        showToast('File size must be less than 10MB', 'error');
+        return;
+      }
+
+      selectedFile = file;
+      const url = URL.createObjectURL(file);
+      preview.innerHTML = `<img src="${url}" alt="preview" style="max-width:100%;max-height:250px;border-radius:6px;object-fit:contain">`;
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // SEARCH FUNCTIONALITY
+    // ═══════════════════════════════════════════════════════════
+    
+    searchForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const query = q.value.trim();
+      const type = typeSelector.value;
+
+      if (!query) {
+        showToast('Please enter a search query', 'error');
+        return;
+      }
+
+      // Store query for results page
+      localStorage.setItem('lastQuery', query);
+
+      // Disable form
+      searchBtn.disabled = true;
+      q.disabled = true;
+      typeSelector.disabled = true;
+
+      // Show loading
+      loadingOverlay.classList.add('active');
+
+      try {
+        const results = await fetchResults(query, type);
+        
+        // Store results
+        localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(results));
+        
+        // Show success
+        showToast('Analysis complete! Redirecting...', 'success');
+        
+        // Redirect to results
+        setTimeout(() => {
+          window.location.href = 'results.html';
+        }, 800);
+
+      } catch (error) {
+        console.error('Search failed:', error);
+        
+        // Hide loading
+        loadingOverlay.classList.remove('active');
+        
+        // Re-enable form
+        searchBtn.disabled = false;
+        q.disabled = false;
+        typeSelector.disabled = false;
+        
+        // Show error
+        showToast(error.message || 'Analysis failed. Please try again.', 'error');
+      }
+    });
+
+    imgSearchBtn.addEventListener('click', async () => {
+      if (!selectedFile) {
+        showToast('Please upload an image to search', 'error');
+        return;
+      }
+
+      // Image search not implemented in backend yet
+      showToast('Image search coming soon!', 'error');
+    });
+
+    // ═══════════════════════════════════════════════════════════
+    // API COMMUNICATION
+    // ═══════════════════════════════════════════════════════════
+    
+    async function fetchResults(query, type) {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), CONFIG.REQUEST_TIMEOUT);
+
+      try {
+        const response = await fetch(`${CONFIG.API_BASE_URL}${CONFIG.API_ENDPOINT}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({ query, type }),
+          signal: controller.signal
+        });
+
+        clearTimeout(timeoutId);
+
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.message || `HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data.status !== 'success') {
+          throw new Error(data.message || 'Analysis failed');
+        }
+
+        return data;
+
+      } catch (error) {
+        clearTimeout(timeoutId);
+
+        if (error.name === 'AbortError') {
+          throw new Error('Request timeout. Please try again.');
+        }
+
+        throw error;
+      }
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // UI UTILITIES
+    // ═══════════════════════════════════════════════════════════
+    
+    function showToast(message, type = 'info') {
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+      toast.textContent = message;
+
+      toastContainer.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => {
+          if (toastContainer.contains(toast)) {
+            toastContainer.removeChild(toast);
+          }
+        }, 300);
+      }, 3000);
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+  </script>
+
+
+
+<!-- Loading Overlay -->
+<!-- <div id="loadingOverlay" class="loading-overlay" style="display:none;">
+    <div class="loading-content">
+        <div class="spinner"></div>
+        <div class="loading-text">Analyzing threat intelligence...</div>
+    </div>
+</div> -->
+
+<!-- JavaScript -->
+<script src="static/js/app.js"></script>
+</body>
+</html>

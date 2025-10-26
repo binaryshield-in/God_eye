@@ -1,0 +1,118 @@
+GodEye/
+│
+├── main.py                               # Entry point: orchestrates collection → normalization → analysis → output
+├── requirements.txt                      # Dependencies list
+├── README.md                             # Project documentation
+├── .env                                  # API keys, secret config (ignored by Git)
+├── godeye.log                            # Application runtime log
+│
+├── dashboard/
+│   ├── index.html
+│   ├── entities.html
+│   ├── correlations.html
+│   ├── reports.html
+│   ├── logs.html
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   │   └── components.css
+│   │   │
+│   │   ├── js/
+│   │   │   ├── app.js
+│   │   │   ├── api.js
+│   │   │   └── components/
+│   │   │       ├── summary-cards.js
+│   │   │       ├── charts.js
+│   │   │       ├── entity-table.js
+│   │   │       ├── graph-viewer.js
+│   │   │       └── log-viewer.js
+│   │   │
+│   │   └── lib/
+│   │       ├── chart.min.js
+│   │       └── d3.min.js
+|
+├── collectors/                           # All data source collectors (OSINT APIs, scrapers, etc.)
+│   ├── __init__.py
+│   ├── abuseipdb.py
+│   ├── bing_search.py
+│   ├── crtsh.py
+│   ├── dns_lookup.py
+│   ├── duckduckgo.py
+│   ├── github.py
+│   ├── hibp.py
+│   ├── ipinfo.py
+│   ├── reddit.py
+│   ├── shodan.py
+│   ├── twitter.py
+│   ├── wayback.py
+│   ├── whois.py
+│   └── ...
+│
+├── core/  
+|   ├── correlation/
+│   │   ├── __init__.py
+│   │   ├── graph_builder.py      # Entity relationship graph construction
+│   │   ├── confidence_engine.py  # Threat scoring algorithms
+│   │   ├── embeddings.py         # AI semantic embeddings
+│   │   └── analytics.py          # Analytics aggregation & output
+│   │                               # Central engine for normalization, correlation, and intelligence
+│   ├── __init__.py
+│   ├── normalizer.py                     # Converts raw collector data → unified schema
+│   ├── resolver.py                       # Entity resolution (dedup, merge, linking entities)
+│   ├── confidence.py                     # Confidence score computation logic
+│   ├── correlator.py                     # Correlation logic (cross-source verification)
+│   ├── enrichment.py                     # Optional - geolocation, ASN, or metadata enrichment
+│   ├── schema/
+│   │   ├── normalized.json               # JSON schema for standardized output
+│   │   └── entity.json                   # Schema for merged entities
+│   └── pipeline.py                       # High-level orchestrator to run collection → normalization → output
+│
+├── utils/                                # Shared helper utilities
+│   ├── __init__.py
+│   ├── text.py                           # Text cleaning, HTML stripping, regex utils
+│   ├── time.py                           # Timestamp handling (ISO conversion)
+│   ├── identity.py                       # Canonicalization (domains, IPs, usernames)
+│   ├── logger.py                         # Central logging configuration
+│   ├── storage.py                        # SQLite/JSON helper for saving results
+│   └── config.py                         # Loads environment/configuration variables
+│
+├── results/                              # All result outputs
+│   ├── output.json                       # Raw results per run
+│   ├── normalized.jsonl                  # Normalized records (line-delimited JSON)
+│   ├── entities.json                     # Entity graph or merged entity store
+│   ├── analytics.json                    # Optional: correlation/confidence results
+│   └── reports/                          # Final formatted exports
+│       ├── report_YYYYMMDD.html
+│       └── report_YYYYMMDD.pdf
+│
+├── cache/                                # Local cache for repeated queries
+│   ├── cache.db                          # SQLite cache store
+│   └── temp.json                         # Temporary data if needed
+│
+├── tests/                                # Unit and integration tests
+│   ├── __init__.py
+│   ├── test_collectors.py                # Tests for each collector output
+│   ├── test_normalizer.py                # Tests normalized schema compliance
+│   ├── test_resolver.py
+│   ├── test_confidence.py
+│   └── sample_data/
+│       ├── twitter_raw.json
+│       ├── ipinfo_raw.json
+│       ├── abuseipdb_raw.json
+│       └── crtsh_raw.json
+│
+├── docs/                                 # Developer & user documentation
+│   ├── architecture.md                   # Explains internal flow (collect → normalize → correlate)
+│   ├── config_guide.md                   # How to set up .env and API keys
+│   ├── collector_spec.md                 # How to write new collector modules
+│   ├── normalization_spec.md             # Schema and normalization logic
+│   ├── resolver_spec.md                  # Entity correlation and deduplication logic
+│   └── deployment.md                     # Hosting, Dockerization, or CI/CD instructions
+│
+└── deployment/                           # Optional: deployment tools
+    ├── Dockerfile
+    ├── docker-compose.yml
+    ├── gunicorn.conf.py
+    ├── nginx.conf
+    └── startup.sh

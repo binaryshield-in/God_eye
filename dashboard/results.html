@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Report | GodEye</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         HEADER
+         ═══════════════════════════════════════════════════════════ -->
+    <header class="results-header">
+        <div class="header-left">
+            <h1 class="header-title">
+                <span class="logo-icon"></span>
+                GodEye Intelligence Report
+            </h1>
+            <p class="header-meta">
+                <span id="queryInfo">Loading...</span>
+                <span class="separator">•</span>
+                <span id="timestamp">--</span>
+            </p>
+        </div>
+        <div class="header-actions">
+            <a href="index.html">
+                <button id="backBtn" class="btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Search
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         MAIN CONTAINER
+         ═══════════════════════════════════════════════════════════ -->
+    <main class="results-container">
+
+        <!-- LEFT PANEL: Analytics Dashboard -->
+        <aside class="left-panel">
+            
+            <!-- Metrics Cards -->
+            <div class="metrics-grid">
+                <div class="metric-card" data-animate="fade-up">
+                    <div class="metric-icon">🎯</div>
+                    <div class="metric-content">
+                        <div class="metric-label">Total Entities</div>
+                        <div class="metric-value" id="totalEntities">0</div>
+                    </div>
+                </div>
+
+                <div class="metric-card" data-animate="fade-up" style="animation-delay: 0.1s">
+                    <div class="metric-icon">📊</div>
+                    <div class="metric-content">
+                        <div class="metric-label">Avg Confidence</div>
+                        <div class="metric-value" id="avgConfidence">0%</div>
+                    </div>
+                </div>
+
+                <div class="metric-card" data-animate="fade-up" style="animation-delay: 0.2s">
+                    <div class="metric-icon">🔗</div>
+                    <div class="metric-content">
+                        <div class="metric-label">Sources Queried</div>
+                        <div class="metric-value" id="sourceCount">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="chart-card" data-animate="fade-up" style="animation-delay: 0.3s">
+                <h3 class="chart-title">Confidence Distribution</h3>
+                <div class="chart-container">
+                    <canvas id="confidenceChart"></canvas>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- RIGHT PANEL: Summary & Data -->
+        <section class="right-panel">
+
+            <!-- AI Summary Card -->
+            <div class="summary-card" data-animate="fade-up">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        AI Analysis Summary
+                    </h2>
+                    <button id="downloadBtn" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                        </svg>
+                        Download Report
+                    </button>
+                </div>
+                <div class="summary-content" id="summaryText">
+                    <div class="loading-skeleton">
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line short"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Table Card -->
+            <div class="table-card" data-animate="fade-up" style="animation-delay: 0.1s">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
+                        </svg>
+                        Threat Intelligence Data
+                    </h2>
+                    <span class="badge" id="indicatorCount">0 indicators</span>
+                </div>
+                <div class="table-wrapper">
+                    <table class="data-table" id="resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Indicator</th>
+                                <th>Type</th>
+                                <th>Confidence</th>
+                                <th>Connections</th>
+                                <th>Source</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Populated by JavaScript -->
+                            <tr>
+                                <td colspan="5" class="loading-cell">
+                                    <div class="spinner-small"></div>
+                                    Loading data...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         ERROR STATE MODAL
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="error-modal" id="errorModal">
+        <div class="error-content">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <h2>No Data Found</h2>
+            <p>Please run a new search to generate intelligence report.</p>
+            <button id="returnHomeBtn" class="btn-primary">Return to Search</button>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="static/js/results.js"></script>
+</body>
+</html>

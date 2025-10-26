@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Normalized Intelligence Schema",
+  "description": "Defines the structure of normalized OSINT data after processing collectors.",
+  "type": "object",
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Name of the data source (e.g., 'Twitter', 'Shodan', 'GitHub')."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp when data was collected."
+    },
+    "query": {
+      "type": "string",
+      "description": "Original user query or input parameter."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["domain", "ip", "username", "email", "person", "image"],
+      "description": "Type of entity being investigated."
+    },
+    "data": {
+      "type": "object",
+      "description": "Normalized and structured intelligence data.",
+      "properties": {
+        "title": { "type": ["string", "null"] },
+        "description": { "type": ["string", "null"] },
+        "url": { "type": ["string", "null"], "format": "uri" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Relevant tags or metadata extracted."
+        },
+        "indicators": {
+          "type": "object",
+          "description": "Extracted IoCs (Indicators of Compromise).",
+          "properties": {
+            "ip": { "type": ["string", "null"] },
+            "domain": { "type": ["string", "null"] },
+            "email": { "type": ["string", "null"] },
+            "hash": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": ["title", "description"]
+    },
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Calculated confidence level between 0.0 and 1.0."
+    },
+    "enriched": {
+      "type": "boolean",
+      "description": "Indicates if enrichment process is completed."
+    }
+  },
+  "required": ["source", "timestamp", "query", "type", "data"],
+  "additionalProperties": false
+}

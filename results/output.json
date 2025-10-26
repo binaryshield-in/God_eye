@@ -1,0 +1,117 @@
+{
+  "summary": "yellow Analysis of 'binaryshield.in' (auto) identified 16 related entities across 16 intelligence sources. Low-confidence indicators observed with an average confidence score of 58%. Monitoring suggested. No immediate action required.",
+  "indicators": [
+    {
+      "indicator": "849670b1a43add52",
+      "type": "threat_intel",
+      "confidence": 0.88,
+      "connections": 0,
+      "source": "AbuseIPDB"
+    },
+    {
+      "indicator": "binaryshield.in",
+      "type": "certificate",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "crt.sh"
+    },
+    {
+      "indicator": "185.199.111.153",
+      "type": "network_intel",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "DNS Lookup"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "DuckDuckGo"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "GHDB"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "GitHub"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "Google Dorks"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "Google Scraper"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "Google Search"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "HIBP"
+    },
+    {
+      "indicator": "99516544d63fe0f8",
+      "type": "network_intel",
+      "confidence": 0.78,
+      "connections": 0,
+      "source": "IPinfo"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "Reddit"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unknown",
+      "confidence": 0.8,
+      "connections": 0,
+      "source": "Shodan"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unknown",
+      "confidence": 0.9,
+      "connections": 0,
+      "source": "Twitter"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "Wayback"
+    },
+    {
+      "indicator": "unknown",
+      "type": "unstructured",
+      "confidence": 0.5,
+      "connections": 0,
+      "source": "WHOIS"
+    }
+  ]
+}

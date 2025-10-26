@@ -1,0 +1,24 @@
+aiohttp
+aiosqlite
+beautifulsoup4
+tldextract
+dnspython
+requests
+python-whois
+snscrape
+lxml
+html5lib
+pandas
+python-dotenv  # optional, if you want .env support
+praw
+jsonschema
+rice
+pytest
+
+# ✨NEW: AI Correlation Dependencies
+sentence-transformers
+scikit-learn
+networkx
+numpy
+fastapi
+uvicorn

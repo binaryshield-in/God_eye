@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-26T07:31:14.719905+00:00",
+    "version": "1.0",
+    "pipeline_stage": "correlation",
+    "total_entities": 2,
+    "total_relationships": 0
+  },
+  "summary": {
+    "total_entities": 2,
+    "total_connections": 0,
+    "average_confidence": 0.558,
+    "entity_types": {
+      "certificate": 1,
+      "network_intel": 1
+    },
+    "embedding_dimension": 384
+  },
+  "threat_distribution": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "top_threats": [
+    {
+      "entity": "binaryshield.in",
+      "confidence": 0.558,
+      "type": "certificate",
+      "connections": 0
+    },
+    {
+      "entity": "185.199.111.153",
+      "confidence": 0.558,
+      "type": "network_intel",
+      "connections": 0
+    }
+  ],
+  "entities": [
+    {
+      "id": "binaryshield.in",
+      "type": "certificate",
+      "confidence": 0.558,
+      "source": "crt.sh",
+      "first_seen": "2025-10-26T07:31:09.588836+00:00",
+      "connections": 0,
+      "degree_centrality": 0.0,
+      "pagerank": 0.5,
+      "metadata": {
+        "domains": [
+          "binaryshield.in",
+          "hacking-tools-scripts.binaryshield.in",
+          "www.binaryshield.in",
+          "*.binaryshield.in"
+        ],
+        "raw": {
+          "total_certificates": 9,
+          "unique_domains": 4,
+          "domains": [
+            "binaryshield.in",
+            "hacking-tools-scripts.binaryshield.in",
+            "www.binaryshield.in",
+            "*.binaryshield.in"
+          ],
+          "certificates": [
+            {
+              "id": 21436250886,
+              "logged_at": "2025-10-03T05:07:38.971",
+              "not_before": "2025-10-03T04:09:08",
+              "not_after": "2026-01-01T04:09:07",
+              "common_name": "hacking-tools-scripts.binaryshield.in",
+              "issuer_name": "C=US, O=Let's Encrypt, CN=R12"
+            },
+            {
+              "id": 21435043522,
+              "logged_at": "2025-10-03T05:07:38.758",
+              "not_before": "2025-10-03T04:09:08",
+              "not_after": "2026-01-01T04:09:07",
+              "common_name": "hacking-tools-scripts.binaryshield.in",
+              "issuer_name": "C=US, O=Let's Encrypt, CN=R12"
+            },
+            {
+              "id": 21073605374,
+              "logged_at": "2025-09-17T03:45:32.222",
+              "not_before": "2025-09-17T02:47:01",
+              "not_after": "2025-12-16T02:47:00",
+              "common_name": "binaryshield.in",
+              "issuer_name": "C=US, O=Let's Encrypt, CN=R13"
+            },
+            {
+              "id": 21073604677,
+              "logged_at": "2025-09-17T03:45:31.423",
+              "not_before": "2025-09-17T02:47:01",
+              "not_after": "2025-12-16T02:47:00",
+              "common_name": "binaryshield.in",
+              "issuer_name": "C=US, O=Let's Encrypt, CN=R13"
+            },
+            {
+              "id": 20906010883,
+              "logged_at": "2025-09-09T20:33:38.481",
+              "not_before": "2025-09-09T19:35:06",
+              "not_after": "2025-12-08T19:35:05",
+              "common_name": "binaryshield.in",
+              "issuer_name": "C=US, O=Let's Encrypt, CN=E8"
+            },
+            {
+              "id": 20906011759,
+              "logged_at": "2025-09-09T20:33:36.32",
+              "not_before": "2025-09-09T19:35:06",
+              "not_after": "2025-12-08T19:35:05",
+              "common_name": "binaryshield.in",
+              "issuer_name": "C=US, O=Let's Encrypt, CN=E8"
+            },
+            {
+              "id": 20866119197,
+              "logged_at": "2025-09-08T05:50:27.176",
+              "not_before": "2025-09-08T03:24:01",
+              "not_after": "2025-12-07T04:21:10",
+              "common_name": "binaryshield.in",
+              "issuer_name": "C=US, O=Google Trust Services, CN=WE1"
+            },
+            {
+              "id": 20864629156,
+              "logged_at": "2025-09-08T04:24:01.575",
+              "not_before": "2025-09-08T03:24:01",
+              "not_after": "2025-12-07T04:21:10",
+              "common_name": "binaryshield.in",
+              "issuer_name": "C=US, O=Google Trust Services, CN=WE1"
+            },
+            {
+              "id": 20722153694,
+              "logged_at": "2025-09-01T11:31:31.327",
+              "not_before": "2025-09-01T11:31:30",
+              "not_after": "2025-11-30T11:31:30",
+              "common_name": "binaryshield.in",
+              "issuer_name": "C=US, ST=Arizona, L=Scottsdale, O=\"GoDaddy.com, Inc.\", OU=http://certs.godaddy.com/repository/, CN=Go Daddy Secure Certificate Authority - G2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "185.199.111.153",
+      "type": "network_intel",
+      "confidence": 0.558,
+      "source": "DNS Lookup",
+      "first_seen": "2025-10-26T07:31:09.588953+00:00",
+      "connections": 0,
+      "degree_centrality": 0.0,
+      "pagerank": 0.5,
+      "metadata": {
+        "A": [
+          "185.199.111.153",
+          "185.199.109.153",
+          "185.199.108.153",
+          "185.199.110.153"
+        ],
+        "AAAA": [],
+        "MX": [
+          "27 route3.mx.cloudflare.net.",
+          "49 route2.mx.cloudflare.net.",
+          "79 route1.mx.cloudflare.net."
+        ],
+        "NS": [
+          "mario.ns.cloudflare.com.",
+          "mimi.ns.cloudflare.com."
+        ],
+        "TXT": [
+          "\"v=spf1 include:_spf.mx.cloudflare.net ~all\""
+        ],
+        "CNAME": [],
+        "SOA": [
+          "mario.ns.cloudflare.com. dns.cloudflare.com. 2384953379 10000 2400 604800 1800"
+        ]
+      }
+    }
+  ],
+  "relationships": [],
+  "clusters": [],
+  "embeddings_preview": {
+    "binaryshield.in": [
+      -0.006239963695406914,
+      0.08023659139871597,
+      -0.05006174370646477,
+      -0.04194602742791176,
+      0.016151903197169304,
+      -0.02580351009964943,
+      0.025092149153351784,
+      0.08832532912492752,
+      -0.0241346824914217,
+      -0.01911954954266548
+    ],
+    "185.199.111.153": [
+      -0.10840952396392822,
+      0.007250879891216755,
+      0.008676907978951931,
+      -0.010809918865561485,
+      -0.009653204120695591,
+      -0.09088203310966492,
+      -0.037617024034261703,
+      -0.05052758753299713,
+      0.015017304569482803,
+      -0.035368695855140686
+    ]
+  }
+}
